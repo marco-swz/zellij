@@ -34,8 +34,8 @@ keybinds clear-defaults=true {
         bind "Alt i" { GoToTab 8; }
         bind "Alt o" { GoToTab 9; }
         bind "Alt f" { ToggleFocusFullscreen; }
-        bind "Alt p" { CloseFocus; }
-        bind "Alt P" { CloseTab; }
+        bind "Alt x" { CloseFocus; }
+        bind "Alt X" { CloseTab; }
         //bind "Alt Ctrl j" { Resize "Increase Down"; }
         //bind "Alt Ctrl h" { Resize "Increase Left"; }
         //bind "Alt Ctrl k" { Resize "Decrease Up"; }
