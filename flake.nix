@@ -19,6 +19,8 @@
 	};
 
 	in {
+        packages.default = pkgs.zellij-configured;
+
 		devShell = pkgs.mkShell {
 			packages = (with pkgs; [
 				zellij-configured
