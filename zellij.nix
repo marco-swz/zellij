@@ -1,19 +1,23 @@
-{ pkgs, stdenv }:
-let 
-    zellij-configured = pkgs.writeShellScriptBin "ze" ''
-        ${pkgs.zellij}/bin/zellij --config-dir $out
-    '';
-    
-in stdenv.mkDerivation {
-    name = "zellij-configured";
+{ pkgs, stdenv, runtimeShell }:
+stdenv.mkDerivation rec {
+    name = "zellijc";
 
     src = ./.;
 
-    buildInputs = [ zellij-configured ];
+    buildInputs = [ pkgs.zellij pkgs.makeWrapper ];
+
+    binScript = ''
+        #!${runtimeShell}
+        ${pkgs.zellij}/bin/zellij --config-dir ${placeholder "out"}
+    '';
+
+    passAsFile = [ "binScript" ];
 
     installPhase = ''
-        mkdir -p $out
+        mkdir -p $out/bin
         cp -r ./config.kdl $out/
-        ln -s ${zellij-configured}/bin/ze $out/bin
+        cp $binScriptPath $out/bin/zellijc
+        chmod +x $out/bin/zellijc
     '';
+
 }
