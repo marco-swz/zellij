@@ -24,15 +24,15 @@ keybinds clear-defaults=true {
         bind "Alt ." { GoToNextTab; }
         bind "Alt d" { NewPane; }
         bind "Alt s" { NewTab; }
-        bind "Alt q" { GoToTab 1; }
-        bind "Alt w" { GoToTab 2; }
-        bind "Alt e" { GoToTab 3; }
-        bind "Alt r" { GoToTab 4; }
-        bind "Alt t" { GoToTab 5; }
-        bind "Alt y" { GoToTab 6; }
-        bind "Alt u" { GoToTab 7; }
-        bind "Alt i" { GoToTab 8; }
-        bind "Alt o" { GoToTab 9; }
+        bind "Alt u" { GoToTab 1; }
+        bind "Alt q" { GoToTab 2; }
+        bind "Alt w" { GoToTab 3; }
+        bind "Alt e" { GoToTab 4; }
+        bind "Alt r" { GoToTab 5; }
+        bind "Alt t" { GoToTab 6; }
+        bind "Alt y" { GoToTab 7; }
+        bind "Alt p" { GoToTab 8; }
+        bind "Alt i" { GoToTab 9; }
         bind "Alt f" { ToggleFocusFullscreen; }
         bind "Alt x" { CloseFocus; }
         bind "Alt X" { CloseTab; }
