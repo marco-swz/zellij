@@ -2,7 +2,7 @@ default_layout "compact"
 mouse_mode true
 copy_command "wl-copy"
 copy_on_select true
-scrollback_editor "/usr/bin/nvim"
+scrollback_editor "nvim"
 default_shell "bash"
 simplified_ui true
 pane_frames false
@@ -87,7 +87,7 @@ theme "nord"
 themes {
     nord {
         fg "#D8DEE9"
-        bg "#2E3440"
+        bg "#011627"
         //black "#3B4252"
         black "#131a24"
         red "#BF616A"
