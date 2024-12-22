@@ -1,9 +1,9 @@
-default_layout "compact"
+default_layout "default"
 mouse_mode true
 copy_command "wl-copy"
 copy_on_select true
 scrollback_editor "nvim"
-default_shell "bash"
+default_shell "zsh"
 simplified_ui true
 pane_frames false
 
@@ -16,34 +16,29 @@ ui {
 
 keybinds clear-defaults=true {
     normal {
-        bind "Alt h" "Left" { MoveFocus "Left"; }
-        bind "Alt l" "Right" { MoveFocus "Right"; }
-        bind "Alt j" "Down" { MoveFocus "Down"; }
-        bind "Alt k" "Up" { MoveFocus "Up"; }
+        bind "Alt h" { MoveFocus "Left"; }
+        bind "Alt l" { MoveFocus "Right"; }
+        bind "Alt j" { MoveFocus "Down"; }
+        bind "Alt k" { MoveFocus "Up"; }
         bind "Alt ," { GoToPreviousTab; }
         bind "Alt ." { GoToNextTab; }
-        bind "Alt d" { NewPane; }
-        bind "Alt s" { NewTab; }
-        bind "Alt u" { GoToTab 1; }
-        bind "Alt q" { GoToTab 2; }
-        bind "Alt w" { GoToTab 3; }
-        bind "Alt e" { GoToTab 4; }
-        bind "Alt r" { GoToTab 5; }
-        bind "Alt t" { GoToTab 6; }
-        bind "Alt y" { GoToTab 7; }
-        bind "Alt p" { GoToTab 8; }
-        bind "Alt i" { GoToTab 9; }
-        bind "Alt f" { ToggleFocusFullscreen; }
-        bind "Alt x" { CloseFocus; }
-        bind "Alt X" { CloseTab; }
-        //bind "Alt Ctrl j" { Resize "Increase Down"; }
-        //bind "Alt Ctrl h" { Resize "Increase Left"; }
-        //bind "Alt Ctrl k" { Resize "Decrease Up"; }
-        //bind "Alt Ctrl l" { Resize "Decrease Right"; }
-        bind "Alt H" "Left" { MovePane "Left"; }
-        bind "Alt J" "Down" { MovePane "Down"; }
-        bind "Alt K" "Up" { MovePane "Up"; }
-        bind "Alt L" "Right" { MovePane "Right"; }
+        bind "Alt u" { NewPane; }
+        bind "Alt i" { NewTab; }
+        bind "Alt s" { GoToTab 1; }
+        bind "Alt d" { GoToTab 2; }
+        bind "Alt f" { GoToTab 3; }
+        bind "Alt g" { GoToTab 4; }
+        bind "Alt Space" { ToggleFocusFullscreen; }
+        bind "Alt q" { CloseFocus; }
+        bind "Alt Q" { CloseTab; }
+        bind "Alt Ctrl j" { Resize "Increase Down"; }
+        bind "Alt Ctrl h" { Resize "Increase Left"; }
+        bind "Alt Ctrl k" { Resize "Decrease Up"; }
+        bind "Alt Ctrl l" { Resize "Decrease Right"; }
+        bind "Alt H" { MovePane "Left"; }
+        bind "Alt J" { MovePane "Down"; }
+        bind "Alt K" { MovePane "Up"; }
+        bind "Alt L" { MovePane "Right"; }
     }
     scroll {
         bind "Alt v" { SwitchToMode "Normal"; }
@@ -83,22 +78,19 @@ plugins {
     compact-bar { path "compact-bar"; }
 }
 
-theme "nord"
+theme "kanagawa"
 themes {
-    nord {
-        fg "#D8DEE9"
-        bg "#011627"
-        //black "#3B4252"
-        black "#131a24"
-        red "#BF616A"
-        //green "#A3BE8C"
-        green "#719cd6"
-        yellow "#EBCB8B"
-        blue "#81A1C1"
-        magenta "#B48EAD"
-        cyan "#88C0D0"
-        white "#E5E9F0"
-        //orange "#D08770"
-        orange "#A3BE8C"
+    kanagawa {
+        fg "#DCD7BA"
+        bg "#1F1F28"
+        red "#C34043"
+        green "#76946A"
+        yellow "#FF9E3B"
+        blue "#7E9CD8"
+        magenta "#957FB8"
+        orange "#FFA066"
+        cyan "#7FB4CA"
+        black "#16161D"
+        white "#DCD7BA"
     }
 }
