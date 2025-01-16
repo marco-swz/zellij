@@ -21,24 +21,24 @@ keybinds clear-defaults=true {
         bind "Alt j" { MoveFocus "Down"; }
         bind "Alt k" { MoveFocus "Up"; }
         bind "Alt ," { GoToPreviousTab; }
+        bind "Alt b" { GoToPreviousTab; }
         bind "Alt ." { GoToNextTab; }
-        bind "Alt u" { NewPane; }
-        bind "Alt i" { NewTab; }
-        bind "Alt s" { GoToTab 1; }
-        bind "Alt d" { GoToTab 2; }
-        bind "Alt f" { GoToTab 3; }
-        bind "Alt g" { GoToTab 4; }
-        bind "Alt Space" { ToggleFocusFullscreen; }
-        bind "Alt q" { CloseFocus; }
-        bind "Alt Q" { CloseTab; }
-        bind "Alt Ctrl j" { Resize "Increase Down"; }
-        bind "Alt Ctrl h" { Resize "Increase Left"; }
-        bind "Alt Ctrl k" { Resize "Decrease Up"; }
-        bind "Alt Ctrl l" { Resize "Decrease Right"; }
-        bind "Alt H" { MovePane "Left"; }
-        bind "Alt J" { MovePane "Down"; }
-        bind "Alt K" { MovePane "Up"; }
-        bind "Alt L" { MovePane "Right"; }
+        bind "Alt m" { NewPane; }
+        bind "Alt n" { NewTab; }
+        bind "Alt u" { GoToTab 1; }
+        bind "Alt i" { GoToTab 2; }
+        bind "Alt o" { GoToTab 3; }
+        bind "Alt p" { GoToTab 4; }
+        bind "Alt ;" { ToggleFocusFullscreen; }
+        bind "Alt N" { CloseTab; }
+        bind "Alt H" { Resize "Increase Left"; }
+        bind "Alt J" { Resize "Increase Down"; }
+        bind "Alt K" { Resize "Decrease Down"; }
+        bind "Alt L" { Resize "Decrease Left"; }
+        bind "Alt Ctrl H" { MovePane "Left"; }
+        bind "Alt Ctrl J" { MovePane "Down"; }
+        bind "Alt Ctrl K" { MovePane "Up"; }
+        bind "Alt Ctrl L" { MovePane "Right"; }
     }
     scroll {
         bind "Alt v" { SwitchToMode "Normal"; }
