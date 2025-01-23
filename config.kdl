@@ -1,6 +1,7 @@
 default_layout "default"
 mouse_mode true
-copy_command "wl-copy"
+//copy_command "wl-copy"
+copy_command: "xclip -selection clipboard"
 copy_on_select true
 scrollback_editor "nvim"
 default_shell "nu"
@@ -35,6 +36,8 @@ keybinds clear-defaults=true {
         bind "Alt J" { Resize "Increase Down"; }
         bind "Alt K" { Resize "Decrease Down"; }
         bind "Alt L" { Resize "Decrease Left"; }
+        bind "Alt '" { Detach; }
+        bind "Alt \"" { Quit; }
         bind "Alt Ctrl H" { MovePane "Left"; }
         bind "Alt Ctrl J" { MovePane "Down"; }
         bind "Alt Ctrl K" { MovePane "Up"; }
