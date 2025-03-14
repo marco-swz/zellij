@@ -25,7 +25,9 @@ keybinds clear-defaults=true {
         bind "Alt b" { GoToPreviousTab; }
         bind "Alt ." { GoToNextTab; }
         bind "Alt m" { NewPane; }
-        bind "Alt n" { NewTab; }
+        bind "Alt n" { NewTab {
+           layout "/home/marco/.config/zellij/layouts/tab.kdl"
+        };}
         bind "Alt u" { GoToTab 1; }
         bind "Alt i" { GoToTab 2; }
         bind "Alt o" { GoToTab 3; }
