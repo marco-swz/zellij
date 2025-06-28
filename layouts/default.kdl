@@ -1,5 +1,5 @@
 layout {
-    tab name="shell" {
+    tab name="editor" focus=true {
         pane size=1 borderless=true {
             plugin location="zellij:compact-bar"
         }
@@ -8,13 +8,12 @@ layout {
             pane focus=true
         }
     }
-    tab name="editor" focus=true {
+    tab name="terminal" {
         pane size=1 borderless=true {
             plugin location="zellij:compact-bar"
         }
         pane split_direction="vertical" {
             pane size="32%"
-            pane focus=true
         }
     }
 }
