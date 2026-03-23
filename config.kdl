@@ -3,7 +3,7 @@ mouse_mode true
 //copy_command "wl-copy"
 copy_command: "xclip -selection clipboard"
 copy_on_select true
-scrollback_editor "hx"
+scrollback_editor "nvim"
 default_shell "bash"
 simplified_ui true
 pane_frames false
@@ -33,6 +33,11 @@ keybinds clear-defaults=true {
         bind "Alt o" { GoToTab 3; }
         bind "Alt p" { GoToTab 4; }
         bind "Alt ;" { ToggleFocusFullscreen; }
+        bind "Alt y" {
+            LaunchOrFocusPlugin "zellij:session-manager" {
+                floating true
+            }
+        }
         bind "Alt N" { CloseTab; }
         bind "Alt H" { Resize "Increase Left"; }
         bind "Alt J" { Resize "Increase Down"; }
